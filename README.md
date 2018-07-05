@@ -14,7 +14,7 @@ Steps for running the application
 
 5. dotnet restore
 
-6. dotnet fable npm-buiild (for building your project)
+6. dotnet fable npm-build (for building your project)
 
 7. dotnet fable npm-start 
 
