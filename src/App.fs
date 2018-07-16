@@ -34,13 +34,15 @@ let menu currentPage =
         [ ClassName "menu-list" ]
         [ menuItem "Home" Home currentPage
           menuItem "Counter sample" Counter currentPage
-          menuItem "About" Page.About currentPage ] ]
+          menuItem "About" Page.About currentPage
+          menuItem "Details" Page.Details currentPage   ] ]
 
 let root model dispatch =
 
   let pageHtml =
     function
     | Page.About -> Info.View.root
+    | Page.Details -> Details.View.root
     | Counter -> Counter.View.root model.counter (CounterMsg >> dispatch)
     | Home -> Home.View.root model.home (HomeMsg >> dispatch)
 
